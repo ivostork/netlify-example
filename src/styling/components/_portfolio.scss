@@ -1,0 +1,54 @@
+@include keyframes(heroDown) {
+  0% { 
+    transform: scale(.5);
+  }
+  100% { 
+    transform: scale(1);
+  }
+}
+
+
+.portfolio {
+  
+  .portfolio-hero {
+    text-align: center;    
+  }
+
+    .portfolio-hero-copy {
+      @include animation-name(heroDown);
+      @include animation-delay(.1s);
+      @include animation-duration(.5s);
+      @include animation-fill-mode(both);
+      @include animation-timing-function(cubic-bezier(0.68, -0.55, 0.265, 1.55));
+    }
+
+  [class^="portfolio-link-project"] {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: color(2);
+    padding: rem(32);
+    margin-bottom: rem(24);
+
+    img {
+      max-width:100%;
+      box-shadow:0 2px 16px rgba(0,0,0,.54);
+    }
+  }
+
+    .portfolio-project-desc {
+      font-size:rem(12);
+      color:color(5);
+      margin-bottom:0;
+    }
+
+    .portfolio-project-asset {            
+      display: inline-block;
+      font-size:rem(20);
+      color:color(5);
+      text-decoration: none;
+      font-weight: 600;
+
+      padding-right: rem(28);
+      background:url("./../content/link.svg") no-repeat right;
+    }
+}

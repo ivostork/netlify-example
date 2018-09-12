@@ -1,0 +1,40 @@
+.form-group {        
+  margin-bottom:rem(24);
+
+  label,
+  legend {
+    display: block;
+  }
+
+  .controls-label {
+    margin-bottom: rem(4);
+  }
+
+  .validation-message {
+    font-size:rem(12);
+    color:color(1);
+    margin-bottom: rem(8);
+  }
+
+  .label-description {
+    margin-top:rem(4);
+    font-size:rem(12);
+    color:color(5);
+  }  
+
+  &.is-invalid {
+    input[type="text"],
+    input[type="email"],
+    select {
+      border-color:color(8) !important;
+    }
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    &:invalid {
+      border-color:color(8) !important;
+    }
+  }
+}
